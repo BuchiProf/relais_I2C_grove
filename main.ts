@@ -1,3 +1,7 @@
+/**
+ * Blocs pour le contrôle du module 4-Relais Seeed Studio.
+ */
+// % color="#03AA14" icon="\uf013" block="Relais Seeed"
 namespace seeedRelay {
 
     export enum ActionRelais {
