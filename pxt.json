@@ -1,5 +1,6 @@
 {
     "name": "relais-i2c-grove",
+    "version": "0.0.1",
     "description": "Extension 4 Relais Seeed par ProfBuchi",
     "dependencies": {
         "core": "*",
