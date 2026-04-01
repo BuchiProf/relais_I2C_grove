@@ -1,25 +1,26 @@
 /**
- * Blocs pour le contrôle du module 4-Relais Seeed Studio.
+ * Extension pour le module 4-Relais I2C de Seeed Studio
  */
-//%color="#03AA14" icon="\uf013" block="Relais Seeed"
+// % color="#03AA14" icon="\uf013" block="Relais Seeed"
 namespace seeedRelay {
 
-    export enum ActionRelais {
-        //% block="allumé"
-        Active = 1,
-        //% block="éteint"
-        Desactive = 0
+    // Menu déroulant pour l'état
+    export enum RelayState {
+        // % block="allumé"
+        On = 1,
+        // % block="éteint"
+        Off = 0
     }
 
     // NOUVEAU : Menu déroulant pour le choix du relais
     export enum RelayNumber {
-        // % block="1"
+        // % block="sw1"
         Relay1 = 1,
-        // % block="2"
+        // % block="sw2"
         Relay2 = 2,
-        // % block="3"
+        // % block="sw3"
         Relay3 = 3,
-        // % block="4"
+        // % block="sw4"
         Relay4 = 4
     }
 
@@ -28,7 +29,7 @@ namespace seeedRelay {
      */
     // % block="mettre le relais %num à %state"
     // % num.defl=RelayNumber.Relay1
-    export function controlRelay(num: RelayNumber, state: ActionRelais): void {
+    export function controlRelay(num: RelayNumber, state: RelayState): void {
         let buf = pins.createBuffer(2);
         buf[0] = num;   // Utilise la valeur de l'enum (1, 2, 3 ou 4)
         buf[1] = state; // Utilise 1 ou 0
