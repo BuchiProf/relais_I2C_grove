@@ -1,12 +1,9 @@
 {
     "name": "relaisI2Cgrove",
-    "description": "",
+    "description": "Extension pour module 4 relais Seeed Studio I2C",
     "dependencies": {
         "core": "*",
-        "radio": "*",
-        "microphone": "*",
-        "relaisI2Cgrove": "github:BuchiProf/relais_I2C_grove#bfbb2089c179b8f23055602e15972d35f96cd1cf",
-        "microbit": "*"
+        "microphone": "*"
     },
     "files": [
         "main.ts",
@@ -16,11 +13,11 @@
         "test.ts"
     ],
     "targetVersions": {
-        "target": "8.0.18",
-        "targetId": "microbit"
+        "targetId": "microbit",
+        "target": "8.0.18"
     },
     "supportedTargets": [
         "microbit"
     ],
-    "preferredEditor": "tsprj"
+    "preferredEditor": "tsmain"
 }
