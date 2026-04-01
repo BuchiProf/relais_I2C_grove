@@ -1,10 +1,10 @@
 namespace seeedRelay {
 
-    export enum RelayState {
+    export enum ActionRelais {
         // % block="allumé"
-        On = 1,
+        Active = 1,
         // % block="éteint"
-        Off = 0
+        Desactive = 0
     }
 
     /**
@@ -12,7 +12,7 @@ namespace seeedRelay {
      */
     // % block="mettre le relais %num à %state"
     // % num.min=1 num.max=4 num.defl=1
-    export function controlRelay(num: number, state: RelayState): void {
+    export function controlRelais(num: number, state: ActionRelais): void {
         let buf = pins.createBuffer(2);
         buf[0] = num;
         buf[1] = state;

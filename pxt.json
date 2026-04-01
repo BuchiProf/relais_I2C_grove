@@ -4,7 +4,8 @@
     "dependencies": {
         "core": "*",
         "radio": "*",
-        "microphone": "*"
+        "microphone": "*",
+        "relaisI2Cgrove": "github:BuchiProf/relais_I2C_grove#bfbb2089c179b8f23055602e15972d35f96cd1cf"
     },
     "files": [
         "main.ts",
