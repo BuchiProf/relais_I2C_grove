@@ -34,5 +34,5 @@ namespace seeedRelay {
         buf[0] = num;   // Utilise la valeur de l'enum (1, 2, 3 ou 4)
         buf[1] = state; // Utilise 1 ou 0
         pins.i2cWriteBuffer(0x11, buf);
-    }
+    } 
 }
