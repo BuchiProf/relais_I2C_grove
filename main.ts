@@ -1,6 +1,5 @@
-export namespace seeedRelay {
+namespace seeedRelay {
 
-    // Cette partie crée un menu déroulant pour ON et OFF
     export enum RelayState {
         // % block="allumé"
         On = 1,
@@ -18,15 +17,5 @@ export namespace seeedRelay {
         buf[0] = num;
         buf[1] = state;
         pins.i2cWriteBuffer(0x11, buf);
-    }
-
-    /**
-     * Éteint tous les relais
-     */
-    // % block="éteindre tous les relais"
-    export function allOff(): void {
-        for (let i = 1; i <= 4; i++) {
-            controlRelay(i, RelayState.Off);
-        }
     }
 }
