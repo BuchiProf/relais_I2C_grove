@@ -11,15 +11,27 @@ namespace seeedRelay {
         Desactive = 0
     }
 
+    // NOUVEAU : Menu déroulant pour le choix du relais
+    export enum RelayNumber {
+        // % block="1"
+        Relay1 = 1,
+        // % block="2"
+        Relay2 = 2,
+        // % block="3"
+        Relay3 = 3,
+        // % block="4"
+        Relay4 = 4
+    }
+
     /**
-     * Change l'état d'un relais spécifique (1 à 4)
+     * Change l'état d'un relais spécifique via menu déroulant
      */
-    //% block="mettre le relais %num à %state"
-    //% num.min=1 num.max=4 num.defl=1
-    export function controlRelais(num: number, state: ActionRelais): void {
+    // % block="mettre le relais %num à %state"
+    // % num.defl=RelayNumber.Relay1
+    export function controlRelay(num: RelayNumber, state: ActionRelais): void {
         let buf = pins.createBuffer(2);
-        buf[0] = num;
-        buf[1] = state;
+        buf[0] = num;   // Utilise la valeur de l'enum (1, 2, 3 ou 4)
+        buf[1] = state; // Utilise 1 ou 0
         pins.i2cWriteBuffer(0x11, buf);
     }
 }
