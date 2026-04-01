@@ -1,4 +1,4 @@
-namespace seeedRelay {
+export namespace seeedRelay {
 
     // Cette partie crée un menu déroulant pour ON et OFF
     export enum RelayState {
