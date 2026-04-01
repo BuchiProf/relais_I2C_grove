@@ -1,6 +1,6 @@
 {
     "name": "relais-i2c-grove",
-    "description": "Extension 4 Relais Seeed",
+    "description": "Extension 4 Relais Seeed par ProfBuchi",
     "dependencies": {
         "core": "*",
         "microphone": "*"
